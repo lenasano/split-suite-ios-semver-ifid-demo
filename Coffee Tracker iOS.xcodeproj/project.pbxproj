@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67DD279C2BF2CE1600ADEDE5 /* Coffee_Tracker_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD279B2BF2CE1600ADEDE5 /* Coffee_Tracker_iOSApp.swift */; };
+		67DD279E2BF2CE1600ADEDE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD279D2BF2CE1600ADEDE5 /* ContentView.swift */; };
+		67DD27A02BF2CE1700ADEDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DD279F2BF2CE1700ADEDE5 /* Assets.xcassets */; };
+		67DD27A32BF2CE1700ADEDE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DD27A22BF2CE1700ADEDE5 /* Preview Assets.xcassets */; };
+		67DD27AD2BF2CE1700ADEDE5 /* Coffee_Tracker_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD27AC2BF2CE1700ADEDE5 /* Coffee_Tracker_iOSTests.swift */; };
+		67DD27B72BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD27B62BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITests.swift */; };
+		67DD27B92BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD27B82BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67DD27A92BF2CE1700ADEDE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67DD27902BF2CE1600ADEDE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67DD27972BF2CE1600ADEDE5;
+			remoteInfo = "Coffee Tracker iOS";
+		};
+		67DD27B32BF2CE1700ADEDE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67DD27902BF2CE1600ADEDE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67DD27972BF2CE1600ADEDE5;
+			remoteInfo = "Coffee Tracker iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67DD27982BF2CE1600ADEDE5 /* Coffee Tracker iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Tracker iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DD279B2BF2CE1600ADEDE5 /* Coffee_Tracker_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_Tracker_iOSApp.swift; sourceTree = "<group>"; };
+		67DD279D2BF2CE1600ADEDE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		67DD279F2BF2CE1700ADEDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67DD27A22BF2CE1700ADEDE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67DD27A82BF2CE1700ADEDE5 /* Coffee Tracker iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee Tracker iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DD27AC2BF2CE1700ADEDE5 /* Coffee_Tracker_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_Tracker_iOSTests.swift; sourceTree = "<group>"; };
+		67DD27B22BF2CE1700ADEDE5 /* Coffee Tracker iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee Tracker iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DD27B62BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_Tracker_iOSUITests.swift; sourceTree = "<group>"; };
+		67DD27B82BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_Tracker_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67DD27952BF2CE1600ADEDE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DD27A52BF2CE1700ADEDE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DD27AF2BF2CE1700ADEDE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67DD278F2BF2CE1600ADEDE5 = {
+			isa = PBXGroup;
+			children = (
+				67DD279A2BF2CE1600ADEDE5 /* Coffee Tracker iOS */,
+				67DD27AB2BF2CE1700ADEDE5 /* Coffee Tracker iOSTests */,
+				67DD27B52BF2CE1700ADEDE5 /* Coffee Tracker iOSUITests */,
+				67DD27992BF2CE1600ADEDE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67DD27992BF2CE1600ADEDE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67DD27982BF2CE1600ADEDE5 /* Coffee Tracker iOS.app */,
+				67DD27A82BF2CE1700ADEDE5 /* Coffee Tracker iOSTests.xctest */,
+				67DD27B22BF2CE1700ADEDE5 /* Coffee Tracker iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67DD279A2BF2CE1600ADEDE5 /* Coffee Tracker iOS */ = {
+			isa = PBXGroup;
+			children = (
+				67DD279B2BF2CE1600ADEDE5 /* Coffee_Tracker_iOSApp.swift */,
+				67DD279D2BF2CE1600ADEDE5 /* ContentView.swift */,
+				67DD279F2BF2CE1700ADEDE5 /* Assets.xcassets */,
+				67DD27A12BF2CE1700ADEDE5 /* Preview Content */,
+			);
+			path = "Coffee Tracker iOS";
+			sourceTree = "<group>";
+		};
+		67DD27A12BF2CE1700ADEDE5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				67DD27A22BF2CE1700ADEDE5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		67DD27AB2BF2CE1700ADEDE5 /* Coffee Tracker iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				67DD27AC2BF2CE1700ADEDE5 /* Coffee_Tracker_iOSTests.swift */,
+			);
+			path = "Coffee Tracker iOSTests";
+			sourceTree = "<group>";
+		};
+		67DD27B52BF2CE1700ADEDE5 /* Coffee Tracker iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67DD27B62BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITests.swift */,
+				67DD27B82BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITestsLaunchTests.swift */,
+			);
+			path = "Coffee Tracker iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67DD27972BF2CE1600ADEDE5 /* Coffee Tracker iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67DD27BC2BF2CE1700ADEDE5 /* Build configuration list for PBXNativeTarget "Coffee Tracker iOS" */;
+			buildPhases = (
+				67DD27942BF2CE1600ADEDE5 /* Sources */,
+				67DD27952BF2CE1600ADEDE5 /* Frameworks */,
+				67DD27962BF2CE1600ADEDE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coffee Tracker iOS";
+			productName = "Coffee Tracker iOS";
+			productReference = 67DD27982BF2CE1600ADEDE5 /* Coffee Tracker iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67DD27A72BF2CE1700ADEDE5 /* Coffee Tracker iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67DD27BF2BF2CE1700ADEDE5 /* Build configuration list for PBXNativeTarget "Coffee Tracker iOSTests" */;
+			buildPhases = (
+				67DD27A42BF2CE1700ADEDE5 /* Sources */,
+				67DD27A52BF2CE1700ADEDE5 /* Frameworks */,
+				67DD27A62BF2CE1700ADEDE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67DD27AA2BF2CE1700ADEDE5 /* PBXTargetDependency */,
+			);
+			name = "Coffee Tracker iOSTests";
+			productName = "Coffee Tracker iOSTests";
+			productReference = 67DD27A82BF2CE1700ADEDE5 /* Coffee Tracker iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67DD27B12BF2CE1700ADEDE5 /* Coffee Tracker iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67DD27C22BF2CE1700ADEDE5 /* Build configuration list for PBXNativeTarget "Coffee Tracker iOSUITests" */;
+			buildPhases = (
+				67DD27AE2BF2CE1700ADEDE5 /* Sources */,
+				67DD27AF2BF2CE1700ADEDE5 /* Frameworks */,
+				67DD27B02BF2CE1700ADEDE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67DD27B42BF2CE1700ADEDE5 /* PBXTargetDependency */,
+			);
+			name = "Coffee Tracker iOSUITests";
+			productName = "Coffee Tracker iOSUITests";
+			productReference = 67DD27B22BF2CE1700ADEDE5 /* Coffee Tracker iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67DD27902BF2CE1600ADEDE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					67DD27972BF2CE1600ADEDE5 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					67DD27A72BF2CE1700ADEDE5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 67DD27972BF2CE1600ADEDE5;
+					};
+					67DD27B12BF2CE1700ADEDE5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 67DD27972BF2CE1600ADEDE5;
+					};
+				};
+			};
+			buildConfigurationList = 67DD27932BF2CE1600ADEDE5 /* Build configuration list for PBXProject "Coffee Tracker iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67DD278F2BF2CE1600ADEDE5;
+			productRefGroup = 67DD27992BF2CE1600ADEDE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67DD27972BF2CE1600ADEDE5 /* Coffee Tracker iOS */,
+				67DD27A72BF2CE1700ADEDE5 /* Coffee Tracker iOSTests */,
+				67DD27B12BF2CE1700ADEDE5 /* Coffee Tracker iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67DD27962BF2CE1600ADEDE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DD27A32BF2CE1700ADEDE5 /* Preview Assets.xcassets in Resources */,
+				67DD27A02BF2CE1700ADEDE5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DD27A62BF2CE1700ADEDE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DD27B02BF2CE1700ADEDE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67DD27942BF2CE1600ADEDE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DD279E2BF2CE1600ADEDE5 /* ContentView.swift in Sources */,
+				67DD279C2BF2CE1600ADEDE5 /* Coffee_Tracker_iOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DD27A42BF2CE1700ADEDE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DD27AD2BF2CE1700ADEDE5 /* Coffee_Tracker_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DD27AE2BF2CE1700ADEDE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DD27B72BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITests.swift in Sources */,
+				67DD27B92BF2CE1700ADEDE5 /* Coffee_Tracker_iOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67DD27AA2BF2CE1700ADEDE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67DD27972BF2CE1600ADEDE5 /* Coffee Tracker iOS */;
+			targetProxy = 67DD27A92BF2CE1700ADEDE5 /* PBXContainerItemProxy */;
+		};
+		67DD27B42BF2CE1700ADEDE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67DD27972BF2CE1600ADEDE5 /* Coffee Tracker iOS */;
+			targetProxy = 67DD27B32BF2CE1700ADEDE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		67DD27BA2BF2CE1700ADEDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67DD27BB2BF2CE1700ADEDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67DD27BD2BF2CE1700ADEDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Coffee Tracker iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "splitio-examples.Coffee-Tracker-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67DD27BE2BF2CE1700ADEDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Coffee Tracker iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "splitio-examples.Coffee-Tracker-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67DD27C02BF2CE1700ADEDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "splitio-examples.Coffee-Tracker-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coffee Tracker iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Coffee Tracker iOS";
+			};
+			name = Debug;
+		};
+		67DD27C12BF2CE1700ADEDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "splitio-examples.Coffee-Tracker-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coffee Tracker iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Coffee Tracker iOS";
+			};
+			name = Release;
+		};
+		67DD27C32BF2CE1700ADEDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "splitio-examples.Coffee-Tracker-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coffee Tracker iOS";
+			};
+			name = Debug;
+		};
+		67DD27C42BF2CE1700ADEDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "splitio-examples.Coffee-Tracker-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coffee Tracker iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67DD27932BF2CE1600ADEDE5 /* Build configuration list for PBXProject "Coffee Tracker iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DD27BA2BF2CE1700ADEDE5 /* Debug */,
+				67DD27BB2BF2CE1700ADEDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67DD27BC2BF2CE1700ADEDE5 /* Build configuration list for PBXNativeTarget "Coffee Tracker iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DD27BD2BF2CE1700ADEDE5 /* Debug */,
+				67DD27BE2BF2CE1700ADEDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67DD27BF2BF2CE1700ADEDE5 /* Build configuration list for PBXNativeTarget "Coffee Tracker iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DD27C02BF2CE1700ADEDE5 /* Debug */,
+				67DD27C12BF2CE1700ADEDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67DD27C22BF2CE1700ADEDE5 /* Build configuration list for PBXNativeTarget "Coffee Tracker iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DD27C32BF2CE1700ADEDE5 /* Debug */,
+				67DD27C42BF2CE1700ADEDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67DD27902BF2CE1600ADEDE5 /* Project object */;
+}
