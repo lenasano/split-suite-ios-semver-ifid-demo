@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67DD279E2BF2CE1600ADEDE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD279D2BF2CE1600ADEDE5 /* ContentView.swift */; };
+		673D809C2BF8CECE006D20F9 /* SplitSuite in Frameworks */ = {isa = PBXBuildFile; productRef = 673D809B2BF8CECE006D20F9 /* SplitSuite */; };
+		673D809F2BF8CF42006D20F9 /* SplitRum in Frameworks */ = {isa = PBXBuildFile; productRef = 673D809E2BF8CF42006D20F9 /* SplitRum */; };
+		673D80A22BF8CF76006D20F9 /* Split in Frameworks */ = {isa = PBXBuildFile; productRef = 673D80A12BF8CF76006D20F9 /* Split */; };
 		67DD27A02BF2CE1700ADEDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DD279F2BF2CE1700ADEDE5 /* Assets.xcassets */; };
 		67DD27A32BF2CE1700ADEDE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DD27A22BF2CE1700ADEDE5 /* Preview Assets.xcassets */; };
 		67DD27C62BF2CF1300ADEDE5 /* CoffeeTrackeriOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD27C52BF2CF1300ADEDE5 /* CoffeeTrackeriOSApp.swift */; };
 		67DD27FC2BF2F92700ADEDE5 /* CoffeeTrackeriOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD27FB2BF2F92600ADEDE5 /* CoffeeTrackeriOSUITests.swift */; };
 		67DD27FE2BF2F96800ADEDE5 /* CoffeeTrackeriOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD27FD2BF2F96800ADEDE5 /* CoffeeTrackeriOSUITestsLaunchTests.swift */; };
 		67DD28012BF2FB5100ADEDE5 /* CoffeeTrackeriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28002BF2FB5100ADEDE5 /* CoffeeTrackeriOSTests.swift */; };
+		67DD280C2BF2FEC900ADEDE5 /* CoffeeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28042BF2FEC900ADEDE5 /* CoffeeTrackerView.swift */; };
+		67DD280D2BF2FEC900ADEDE5 /* CoffeeTrackerViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28052BF2FEC900ADEDE5 /* CoffeeTrackerViewAsync.swift */; };
+		67DD28102BF2FEC900ADEDE5 /* ContentViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28082BF2FEC900ADEDE5 /* ContentViewAsync.swift */; };
+		67DD28112BF2FEC900ADEDE5 /* DrinkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28092BF2FEC900ADEDE5 /* DrinkListView.swift */; };
+		67DD28122BF2FEC900ADEDE5 /* DrinkListViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD280A2BF2FEC900ADEDE5 /* DrinkListViewAsync.swift */; };
+		67DD281B2BF2FEF100ADEDE5 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28182BF2FEF100ADEDE5 /* Drink.swift */; };
+		67DD281C2BF2FEF100ADEDE5 /* DrinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28192BF2FEF100ADEDE5 /* DrinkType.swift */; };
+		67DD281E2BF2FEFF00ADEDE5 /* CoffeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD281D2BF2FEFF00ADEDE5 /* CoffeeData.swift */; };
+		67DD28202BF2FF0800ADEDE5 /* CoffeeDataAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD281F2BF2FF0800ADEDE5 /* CoffeeDataAsync.swift */; };
+		67DD282A2BF3154200ADEDE5 /* HealthKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28252BF3154200ADEDE5 /* HealthKitController.swift */; };
+		67DD282B2BF3154200ADEDE5 /* HealthKitControllerAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28262BF3154200ADEDE5 /* HealthKitControllerAsync.swift */; };
+		67DD282C2BF3154200ADEDE5 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28272BF3154200ADEDE5 /* HostingController.swift */; };
+		67DD282D2BF3154200ADEDE5 /* SplitWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD28282BF3154200ADEDE5 /* SplitWrapper.swift */; };
+		67DD282F2BF31FA700ADEDE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD282E2BF31FA700ADEDE5 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		67DD27982BF2CE1600ADEDE5 /* Coffee Tracker iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Tracker iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		67DD279D2BF2CE1600ADEDE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67DD279F2BF2CE1700ADEDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67DD27A22BF2CE1700ADEDE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67DD27C52BF2CF1300ADEDE5 /* CoffeeTrackeriOSApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeTrackeriOSApp.swift; sourceTree = "<group>"; };
@@ -44,6 +59,21 @@
 		67DD27FB2BF2F92600ADEDE5 /* CoffeeTrackeriOSUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeTrackeriOSUITests.swift; sourceTree = "<group>"; };
 		67DD27FD2BF2F96800ADEDE5 /* CoffeeTrackeriOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeTrackeriOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		67DD28002BF2FB5100ADEDE5 /* CoffeeTrackeriOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeTrackeriOSTests.swift; sourceTree = "<group>"; };
+		67DD28042BF2FEC900ADEDE5 /* CoffeeTrackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerView.swift; sourceTree = "<group>"; };
+		67DD28052BF2FEC900ADEDE5 /* CoffeeTrackerViewAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerViewAsync.swift; sourceTree = "<group>"; };
+		67DD28082BF2FEC900ADEDE5 /* ContentViewAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewAsync.swift; sourceTree = "<group>"; };
+		67DD28092BF2FEC900ADEDE5 /* DrinkListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkListView.swift; sourceTree = "<group>"; };
+		67DD280A2BF2FEC900ADEDE5 /* DrinkListViewAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkListViewAsync.swift; sourceTree = "<group>"; };
+		67DD28182BF2FEF100ADEDE5 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		67DD28192BF2FEF100ADEDE5 /* DrinkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkType.swift; sourceTree = "<group>"; };
+		67DD281D2BF2FEFF00ADEDE5 /* CoffeeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeData.swift; sourceTree = "<group>"; };
+		67DD281F2BF2FF0800ADEDE5 /* CoffeeDataAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeDataAsync.swift; sourceTree = "<group>"; };
+		67DD28242BF3026700ADEDE5 /* Coffee Tracker iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Coffee Tracker iOS.entitlements"; sourceTree = "<group>"; };
+		67DD28252BF3154200ADEDE5 /* HealthKitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitController.swift; sourceTree = "<group>"; };
+		67DD28262BF3154200ADEDE5 /* HealthKitControllerAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitControllerAsync.swift; sourceTree = "<group>"; };
+		67DD28272BF3154200ADEDE5 /* HostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		67DD28282BF3154200ADEDE5 /* SplitWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitWrapper.swift; sourceTree = "<group>"; };
+		67DD282E2BF31FA700ADEDE5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673D80A22BF8CF76006D20F9 /* Split in Frameworks */,
+				673D809F2BF8CF42006D20F9 /* SplitRum in Frameworks */,
+				673D809C2BF8CECE006D20F9 /* SplitSuite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +127,13 @@
 		67DD279A2BF2CE1600ADEDE5 /* Coffee Tracker iOS */ = {
 			isa = PBXGroup;
 			children = (
+				67DD28292BF3154200ADEDE5 /* Controllers */,
+				67DD28242BF3026700ADEDE5 /* Coffee Tracker iOS.entitlements */,
+				67DD281F2BF2FF0800ADEDE5 /* CoffeeDataAsync.swift */,
+				67DD281D2BF2FEFF00ADEDE5 /* CoffeeData.swift */,
+				67DD281A2BF2FEF100ADEDE5 /* Model */,
+				67DD280B2BF2FEC900ADEDE5 /* Views */,
 				67DD27C52BF2CF1300ADEDE5 /* CoffeeTrackeriOSApp.swift */,
-				67DD279D2BF2CE1600ADEDE5 /* ContentView.swift */,
 				67DD279F2BF2CE1700ADEDE5 /* Assets.xcassets */,
 				67DD27A12BF2CE1700ADEDE5 /* Preview Content */,
 			);
@@ -127,6 +165,39 @@
 			path = "Coffee Tracker iOS Tests";
 			sourceTree = "<group>";
 		};
+		67DD280B2BF2FEC900ADEDE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67DD282E2BF31FA700ADEDE5 /* ContentView.swift */,
+				67DD28042BF2FEC900ADEDE5 /* CoffeeTrackerView.swift */,
+				67DD28052BF2FEC900ADEDE5 /* CoffeeTrackerViewAsync.swift */,
+				67DD28082BF2FEC900ADEDE5 /* ContentViewAsync.swift */,
+				67DD28092BF2FEC900ADEDE5 /* DrinkListView.swift */,
+				67DD280A2BF2FEC900ADEDE5 /* DrinkListViewAsync.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67DD281A2BF2FEF100ADEDE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67DD28182BF2FEF100ADEDE5 /* Drink.swift */,
+				67DD28192BF2FEF100ADEDE5 /* DrinkType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67DD28292BF3154200ADEDE5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				67DD28252BF3154200ADEDE5 /* HealthKitController.swift */,
+				67DD28262BF3154200ADEDE5 /* HealthKitControllerAsync.swift */,
+				67DD28272BF3154200ADEDE5 /* HostingController.swift */,
+				67DD28282BF3154200ADEDE5 /* SplitWrapper.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +214,11 @@
 			dependencies = (
 			);
 			name = "Coffee Tracker iOS";
+			packageProductDependencies = (
+				673D809B2BF8CECE006D20F9 /* SplitSuite */,
+				673D809E2BF8CF42006D20F9 /* SplitRum */,
+				673D80A12BF8CF76006D20F9 /* Split */,
+			);
 			productName = "Coffee Tracker iOS";
 			productReference = 67DD27982BF2CE1600ADEDE5 /* Coffee Tracker iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +292,11 @@
 				Base,
 			);
 			mainGroup = 67DD278F2BF2CE1600ADEDE5;
+			packageReferences = (
+				673D809A2BF8CECE006D20F9 /* XCRemoteSwiftPackageReference "ios-suite" */,
+				673D809D2BF8CF42006D20F9 /* XCRemoteSwiftPackageReference "ios-rum" */,
+				673D80A02BF8CF76006D20F9 /* XCRemoteSwiftPackageReference "ios-client" */,
+			);
 			productRefGroup = 67DD27992BF2CE1600ADEDE5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,8 +339,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67DD28122BF2FEC900ADEDE5 /* DrinkListViewAsync.swift in Sources */,
+				67DD281B2BF2FEF100ADEDE5 /* Drink.swift in Sources */,
+				67DD282F2BF31FA700ADEDE5 /* ContentView.swift in Sources */,
+				67DD282C2BF3154200ADEDE5 /* HostingController.swift in Sources */,
+				67DD282D2BF3154200ADEDE5 /* SplitWrapper.swift in Sources */,
+				67DD282A2BF3154200ADEDE5 /* HealthKitController.swift in Sources */,
+				67DD281C2BF2FEF100ADEDE5 /* DrinkType.swift in Sources */,
 				67DD27C62BF2CF1300ADEDE5 /* CoffeeTrackeriOSApp.swift in Sources */,
-				67DD279E2BF2CE1600ADEDE5 /* ContentView.swift in Sources */,
+				67DD280D2BF2FEC900ADEDE5 /* CoffeeTrackerViewAsync.swift in Sources */,
+				67DD282B2BF3154200ADEDE5 /* HealthKitControllerAsync.swift in Sources */,
+				67DD28102BF2FEC900ADEDE5 /* ContentViewAsync.swift in Sources */,
+				67DD281E2BF2FEFF00ADEDE5 /* CoffeeData.swift in Sources */,
+				67DD28202BF2FF0800ADEDE5 /* CoffeeDataAsync.swift in Sources */,
+				67DD280C2BF2FEC900ADEDE5 /* CoffeeTrackerView.swift in Sources */,
+				67DD28112BF2FEC900ADEDE5 /* DrinkListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -405,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -420,11 +514,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Coffee Tracker iOS/Coffee Tracker iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Coffee Tracker iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow Coffee Tracker to read drinks from your health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow Coffee Tracker to write drinks to your health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,11 +545,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Coffee Tracker iOS/Coffee Tracker iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Coffee Tracker iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow Coffee Tracker to read drinks from your health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow Coffee Tracker to write drinks to your health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -582,6 +682,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		673D809A2BF8CECE006D20F9 /* XCRemoteSwiftPackageReference "ios-suite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/splitio/ios-suite";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		673D809D2BF8CF42006D20F9 /* XCRemoteSwiftPackageReference "ios-rum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/splitio/ios-rum";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		673D80A02BF8CF76006D20F9 /* XCRemoteSwiftPackageReference "ios-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/splitio/ios-client";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.24.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		673D809B2BF8CECE006D20F9 /* SplitSuite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 673D809A2BF8CECE006D20F9 /* XCRemoteSwiftPackageReference "ios-suite" */;
+			productName = SplitSuite;
+		};
+		673D809E2BF8CF42006D20F9 /* SplitRum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 673D809D2BF8CF42006D20F9 /* XCRemoteSwiftPackageReference "ios-rum" */;
+			productName = SplitRum;
+		};
+		673D80A12BF8CF76006D20F9 /* Split */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 673D80A02BF8CF76006D20F9 /* XCRemoteSwiftPackageReference "ios-client" */;
+			productName = Split;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67DD27902BF2CE1600ADEDE5 /* Project object */;
 }
