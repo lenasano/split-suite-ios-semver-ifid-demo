@@ -1,14 +1,13 @@
 //
-//  Coffee_Tracker_iOSTests.swift
-//  Coffee Tracker iOSTests
+//  Coffee_Tracker_iOS_Tests.swift
+//  Coffee Tracker iOS Tests
 //
 //  Created by lena on 13/05/2024.
 //
 
 import XCTest
-@testable import Coffee_Tracker_iOS
 
-final class Coffee_Tracker_iOSTests: XCTestCase {
+final class Coffee_Tracker_iOS_Tests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -28,7 +27,7 @@ final class Coffee_Tracker_iOSTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

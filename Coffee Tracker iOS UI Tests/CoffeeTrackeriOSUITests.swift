@@ -1,13 +1,13 @@
 //
-//  Coffee_Tracker_iOSUITests.swift
-//  Coffee Tracker iOSUITests
+//  CoffeeTrackeriOSUITests.swift
+//  Coffee Tracker iOS UI Tests
 //
 //  Created by lena on 13/05/2024.
 //
 
 import XCTest
 
-final class Coffee_Tracker_iOSUITests: XCTestCase {
+final class CoffeeTrackeriOSUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

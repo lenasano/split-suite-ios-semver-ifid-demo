@@ -1,13 +1,13 @@
 //
-//  Coffee_Tracker_iOSUITestsLaunchTests.swift
-//  Coffee Tracker iOSUITests
+//  CoffeeTrackeriOSUITestsLaunchTests.swift
+//  Coffee Tracker iOS UI Tests
 //
 //  Created by lena on 13/05/2024.
 //
 
 import XCTest
 
-final class Coffee_Tracker_iOSUITestsLaunchTests: XCTestCase {
+final class CoffeeTrackeriOSUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
