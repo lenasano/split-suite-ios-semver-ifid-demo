@@ -306,7 +306,8 @@ class CoffeeDataAsync: ObservableObject {
             await self.healthKitController.loadNewDataFromHealthKit()
             
         } else {
-            // todo: deprecated in iOS 13?
+            // Note if seeing a depreciation warning: This warning is impossible to remove if supporting iOS 13+ and iOS 15-
+            // because the async alternative for 'requestAuthorization(completionHander:)' is available from iOS 15
             await self.healthKitController.requestAuthorization { (success) in
                 guard success else {
                     self.logger.debug("Unable to authorize HealthKit.")
