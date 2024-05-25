@@ -23,7 +23,7 @@ struct DrinkListViewAsync: View {
                     Text(drinkType.name)
                 }
             }
-        }
+        }.environment(\.colorScheme, .dark)
     }
     
     // Update the model when the user taps a drink.

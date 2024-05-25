@@ -30,6 +30,7 @@ struct CoffeeTrackeriOSApp: App {
             .onAppear() {
                 logger.debug("App appeared!")
             }
+            .environment(\.colorScheme, .dark)
         }
     }
 }

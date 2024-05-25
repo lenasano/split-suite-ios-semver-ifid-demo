@@ -38,7 +38,7 @@ struct CoffeeTrackerView: View {
             Button(action: { self.showDrinkList.toggle() }) {
                 Image("add-coffee")
                     .renderingMode(.template)
-                    .foregroundColor(Color(red: 0.3, green: 1.0, blue: 1.0)) // .teal
+                    .foregroundColor(Color(red: 0.3, green: 0.7, blue: 0.8)) // .teal
             }.padding()
         }
         .sheet(isPresented: $showDrinkList) {
