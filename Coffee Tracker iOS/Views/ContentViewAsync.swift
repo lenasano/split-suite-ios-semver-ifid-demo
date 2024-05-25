@@ -16,7 +16,12 @@ struct ContentViewAsync: View {
     @Environment(\.scenePhase) private var scenePhase
     
     // Access the shared model object.
-    let data = CoffeeDataAsync.shared
+    let data: CoffeeDataAsync
+    
+    @MainActor
+    init() {
+        data = CoffeeDataAsync.shared
+    }
     
     // Create the main view, and pass the model.
     var body: some View {
