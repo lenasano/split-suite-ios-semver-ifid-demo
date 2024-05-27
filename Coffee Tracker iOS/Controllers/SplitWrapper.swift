@@ -24,31 +24,36 @@ class SplitWrapper: ObservableObject {
     
     @Published var isReady: Bool = false
     @Published var isReadyTimedOut: Bool = false
-
-    @Published private var userConsentValue: Bool?
     
-    private let sdkAPIKey = "[front-end (client-side) Split API Key goes here]" // todo: use env variable
+    // Retrieve the SDK API key
+    // This is the front-end (client-side) Split API Key.
+    // You first need to store this variable in your Swift project Scheme:
+    // click Product | Scheme | Edit Scheme... | Run | Arguments, and add
+    // a "SplitSdkApiKey" environment variable.
+    private let sdkApiKey = ProcessInfo.processInfo.environment["SplitSdkApiKey"]
 
     private init() {
-        let userID = Key(matchingKey: UUID().uuidString)
         
-        // todo: try? SplitRum.setup(apiKey: "hello")
+        // Define the config settings for the Split client
+        
+        let userID = Key(matchingKey: UUID().uuidString)
         
         let clientConfig = SplitClientConfig()
         clientConfig.logLevel = .verbose
-        clientConfig.sdkReadyTimeOut = 1000  // Set the time limit (in milliseconds) for Split definitions to be downloaded and enable the .sdkReadyTimedOut event.
-        clientConfig.userConsent = UserConsent.unknown
+        clientConfig.sdkReadyTimeOut = 1000  // set the time limit (in milliseconds) for Split definitions to be downloaded and enable the .sdkReadyTimedOut event
         
+        // Initialize the Split instance and start downloading Split feature flag
+        // and segment definitions from Split cloud
         
-        // todo: userConsentValue = nil
-        
-        suite = DefaultSplitSuite.builder() //todo: different from docs!
-            .setApiKey(sdkAPIKey)
+        suite = DefaultSplitSuite.builder() // TODO: different from docs!
+            .setApiKey(sdkApiKey!)
             .setKey(userID)
             .setConfig(clientConfig)
             .build()!
         
-        suite.client.on(event: .sdkReadyTimedOut) { [weak self] in // todo: different from docs!
+        // Handle the sdkReadyTimeOut event
+        
+        suite.client.on(event: .sdkReadyTimedOut) { [weak self] in
             guard let self = self else { return }
 
             // The .sdkReadyTimedOut event fires when
@@ -61,6 +66,8 @@ class SplitWrapper: ObservableObject {
             }
         }
         
+        // Handle the sdkReady event
+        
         suite.client.on(event: .sdkReady) { [weak self] in
             guard let self = self else { return }
             
@@ -70,39 +77,22 @@ class SplitWrapper: ObservableObject {
             DispatchQueue.main.async {
                 self.isReady = true
             }
+        
+            // Evaluate a Split feature flag to enable Split to monitor Real User
+            // Monitoring (RUM) metrics for distinct release versions of this app
             
-            // evaluate a Split feature flag to enable Split to calculate RUM
-            // metrics for distinct versions of this app
-            /*
-             attribute = { Version: get this app version }
-             evaluateFeatureFlag(attributes)
-             */
+            var attributes: [String:Any] = [:]
+            attributes["app_version"] = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+            
+            // pass in the attribute to set the flag for this user id
+            _ = evaluateFeatureFlagUsingAttributes("FEATURE_FLAG_NAME", attributes: attributes)
         }
         
         // Tip: The following events can also be received:
         //    .sdkReadyFromCache - faster than .sdkReady
         //    .sdkUpdated        - when new split definitions are received
     }
-    /* todo: no user consent?
-    public var isUserConsentUnknown: Bool {
-        get {
-            return UserConsent.unknown == factory.userConsent
-        }
-    }
     
-    public var isUserConsentGranted: Bool {
-        get {
-            return UserConsent.granted == factory.userConsent
-        }
-        set {
-            factory.setUserConsent(enabled: newValue)
-            
-            DispatchQueue.main.async {
-                self.userConsentValue = newValue
-            }
-        }
-    }
-    */
     // MARK: - Split SDK Function Wrappers
     
     /// Retrieves the treatment for the given feature flag (split), as defined in the Split Management
@@ -110,20 +100,18 @@ class SplitWrapper: ObservableObject {
     /// Parameter: `split`: The name of the split, as defined in the Split Management Console.
     /// Warning: If the Split definitions were not loaded yet, this function will return "CONTROL".
     @discardableResult
-    func evaluateFeatureFlag(_ split: String) -> String {
-        return suite.client.getTreatment(split)
+    func evaluateFeatureFlag(_ flagName: String) -> String {
+        return suite.client.getTreatment(flagName)
     }
     
     /// Retrieves the treatment for the given feature flag (split), as defined in the Split Management
     /// Console.
     /// Parameter: `split`: The name of the split, as defined in the Split Management Console.
     /// Warning: If the Split definitions were not loaded yet, this function will return "CONTROL".
-    /*
-     @discardableResult
-     func evaluateFeatureFlag(_ split: String, attributes:[String, Any]) -> String {
-        // todo: add attributes
-        return factory.client.getTreatment(split)
-    }*/
+    @discardableResult
+    func evaluateFeatureFlagUsingAttributes(_ flagName: String, attributes: [String:Any]) -> String {
+        return suite.client.getTreatment(flagName, attributes:attributes)
+    }
     
     /// Sends an event to Split Cloud where it is logged.
     /// Parameter: `event`: The string that will be displayed as the event name.
