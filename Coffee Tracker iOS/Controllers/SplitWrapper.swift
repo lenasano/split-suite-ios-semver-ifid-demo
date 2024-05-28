@@ -14,8 +14,23 @@ import Foundation
 import iOSSplitSuite
 
 
-class SplitWrapper: ObservableObject {
 
+class SplitWrapper: ObservableObject {
+    
+    // MARK: - Strings that are also used in Split UI (exact match)
+    
+    struct flag {
+        static let appVersion = "coffee_tracker_app_version"
+        static let iOSVersion = "coffee_tracker_ios_version"
+    }
+
+    struct flagAttribute {
+        static let appVersion = "app_version"
+        static let iosVersion = "ios_version"
+    }
+
+    // MARK: - SplitWrapper implementation
+    
     static let instance: SplitWrapper = {
         return SplitWrapper()
     }()
@@ -30,6 +45,7 @@ class SplitWrapper: ObservableObject {
     // You first need to store this variable in your Swift project Scheme:
     // click Product | Scheme | Edit Scheme... | Run | Arguments, and add
     // a "SplitSdkApiKey" environment variable.
+    
     private let sdkApiKey = ProcessInfo.processInfo.environment["SplitSdkApiKey"]
 
     private init() {
@@ -82,10 +98,13 @@ class SplitWrapper: ObservableObject {
             // Monitoring (RUM) metrics for distinct release versions of this app
             
             var attributes: [String:Any] = [:]
-            attributes["app_version"] = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+            attributes[flagAttribute.appVersion] = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
             
-            // pass in the attribute to set the flag for this user id
-            _ = evaluateFeatureFlagUsingAttributes("FEATURE_FLAG_NAME", attributes: attributes)
+            // Pass in the Coffee Tracker iOS App version as an
+            // attribute to set the flag for this user id.
+            // RUM Metrics during the session will be correlated to this flag variation (app version).
+            
+            _ = evaluateFeatureFlagUsingAttributes(flag.appVersion, attributes: attributes)
         }
         
         // Tip: The following events can also be received:
