@@ -10,23 +10,29 @@
 //  Copyright © 2024 Apple. All rights reserved.
 //
 
-import Foundation
 import iOSSplitSuite
+import Foundation
+import os
+import UIKit
 
 
 
 class SplitWrapper: ObservableObject {
     
+    // TODO: fix this logger 'subsystem'
+    let logger = Logger(subsystem: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.ContengView", category: "Root View")
+    
     // MARK: - Strings that are also used in Split UI (exact match)
     
     struct flag {
         static let appVersion = "coffee_tracker_app_version"
-        static let iOSVersion = "coffee_tracker_ios_version"
+        static let osVersion  = "coffee_tracker_os_version"
     }
 
     struct flagAttribute {
         static let appVersion = "app_version"
-        static let iosVersion = "ios_version"
+        static let osVersion  = "os_version"
+        static let osName     = "os_name"
     }
 
     // MARK: - SplitWrapper implementation
@@ -94,17 +100,10 @@ class SplitWrapper: ObservableObject {
                 self.isReady = true
             }
         
-            // Evaluate a Split feature flag to enable Split to monitor Real User
-            // Monitoring (RUM) metrics for distinct release versions of this app
+            // Evaluate a Split feature flag to enable Split to distinguish Real User
+            // Monitoring (RUM) metrics for specific release versions of this app
             
-            var attributes: [String:Any] = [:]
-            attributes[flagAttribute.appVersion] = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
-            
-            // Pass in the Coffee Tracker iOS App version as an
-            // attribute to set the flag for this user id.
-            // RUM Metrics during the session will be correlated to this flag variation (app version).
-            
-            _ = evaluateFeatureFlagUsingAttributes(flag.appVersion, attributes: attributes)
+            _ = evaluateFeatureFlagUsingAttributes(flag.appVersion)
         }
         
         // Tip: The following events can also be received:
@@ -114,36 +113,58 @@ class SplitWrapper: ObservableObject {
     
     // MARK: - Split SDK Function Wrappers
     
-    /// Retrieves the treatment for the given feature flag (split), as defined in the Split Management
-    /// Console.
-    /// Parameter: `split`: The name of the split, as defined in the Split Management Console.
-    /// Warning: If the Split definitions were not loaded yet, this function will return "CONTROL".
+    /// Retrieves the treatment for the given feature flag, as defined in the Split UI (https://app.split.io)
+    /// Parameter: `flagName`: The name of the Split feature flag, as defined in the Split UI.
+    /// Warning: If the Split definitions are not yet loaded, this function returns "CONTROL".
     @discardableResult
     func evaluateFeatureFlag(_ flagName: String) -> String {
         return suite.client.getTreatment(flagName)
     }
     
-    /// Retrieves the treatment for the given feature flag (split), as defined in the Split Management
-    /// Console.
-    /// Parameter: `split`: The name of the split, as defined in the Split Management Console.
-    /// Warning: If the Split definitions were not loaded yet, this function will return "CONTROL".
+    /// Retrieves the treatment for the given feature flag, as defined in the Split UI (https://app.split.io)
+    /// in Data Hub > Live Tail.
+    /// Note: Real User Monitoring (RUM) metrics for each user session will be correlated to the flag variation.
+    /// In the Split UI, if the feature flag targeting rules assign flag (treatment) results based on the attribute(s)
+    /// you pass in, then Split can alert you about positive or negative RUM impacts correlated to your attribute(s).
+    /// Parameter: `flagName`: The name of the Split feature flag, as defined in the Split UI.
+    /// Warning: If the Split definitions are not yet loaded, this function returns "CONTROL".
     @discardableResult
-    func evaluateFeatureFlagUsingAttributes(_ flagName: String, attributes: [String:Any]) -> String {
+    func evaluateFeatureFlagUsingAttributes(_ flagName: String) -> String? {
+
+        var attributes: [String:Any] = [:]
+        
+        switch flagName {
+            
+        case flag.appVersion :
+            // Pass the Coffee Tracker iOS App version as an attribute
+            attributes[flagAttribute.appVersion] = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+            
+        case flag.osVersion :
+            // Pass the running OS name and version as an attribute
+            attributes[flagAttribute.osName   ] = UIDevice.current.systemName
+            attributes[flagAttribute.osVersion] = UIDevice.current.systemVersion
+            
+        default:
+            logger.warning("evaluateFeatureFlagUsingAttribute method warning: No attributes are defined for \(flagName)")
+            return nil
+        }
+        
         return suite.client.getTreatment(flagName, attributes:attributes)
     }
     
-    /// Sends an event to Split Cloud where it is logged.
+    /// Sends an event to Split cloud where it is logged, viewable in the Split UI (https://app.split.io)
+    /// in Data Hub > Live Tail.
     /// Parameter: `event`: The string that will be displayed as the event name.
-    /// Important: Split associates the event with each active feature flag and displays the events
-    /// captured for each feature flag treatment (variation) on the given feature flag's 'Metrics impact' tab.
+    /// Note: In the Split UI, you can define metrics to measure the events you send to Split cloud. Split associates the event with each active feature flag and displays the events
+    /// captured for each feature flag variation (treatment) on the given feature flag's 'Metrics impact' tab.
     func trackEventForDefaultTrafficType(_ event: String) -> String {
         return
             suite.client.track(trafficType: "user", eventType: event)
                 .description
     }
     
-    /// Sends an event to Split Cloud where it is logged. A copy of this event is sent for the traffic type of all
-    /// instantiated SplitSuite clients.
+    /// Sends an event to Split cloud where it is logged (viewable in the Split UI | Data Hub | Live Tail).
+    /// Important: A copy of this event is sent for the traffic type of all instantiated `SplitSuite` clients.
     /// Parameter: `event`: The string that will be displayed as the event name.
     /// Important: Split associates the event with each active feature flag and displays the events
     /// captured for each feature flag treatment (variation) on the given feature flag's 'Metrics impact' tab.

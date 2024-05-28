@@ -20,16 +20,12 @@ struct CoffeeTrackeriOSApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                // TODO: use attributes here to pass the iOSVersion so that the rollout
-                // can be version-granular
-                let isAsync = split.evaluateFeatureFlag(SplitWrapper.flag.iOSVersion)
+                let isAsync = split.evaluateFeatureFlagUsingAttributes(SplitWrapper.flag.osVersion)
                 
                 if( "on" == isAsync ) {
-                    if #available(iOS 15, *) {
-                        ContentViewAsync()
-                    } else {
-                        ContentView()
-                    }
+                    ContentViewAsync()
+                } else {
+                    ContentView()
                 }
             }
             .onAppear() {
@@ -38,7 +34,7 @@ struct CoffeeTrackeriOSApp: App {
             .disabled(!split.isReady && !split.isReadyTimedOut)
             .overlay(loadingOverlay)
             .environment(\.colorScheme, .dark)
-            //.environmentObject(split)
+            //.environmentObject(split) - we can pass the SplitWrapper to descendant views, but it's not needed in this demo
         }
     }
     

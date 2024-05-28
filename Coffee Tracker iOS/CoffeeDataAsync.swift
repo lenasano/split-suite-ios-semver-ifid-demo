@@ -297,20 +297,17 @@ class CoffeeDataAsync: ObservableObject {
         await drinksUpdated()
                 
         // Load new data from HealthKit.
-        if #available(iOS 15, *) {  // todo: support iOS 13+ (requestAuthorization)
+        if #available(iOS 15, *) {
             
             guard await healthKitController.requestAuthorization() else {
-                logger.debug("Unable to authorize HealthKit.")
                 return
             }
             await self.healthKitController.loadNewDataFromHealthKit()
             
         } else {
-            // Note if seeing a depreciation warning: This warning is impossible to remove if supporting iOS 13+ and iOS 15-
-            // because the async alternative for 'requestAuthorization(completionHander:)' is available from iOS 15
+            
             await self.healthKitController.requestAuthorization { (success) in
                 guard success else {
-                    self.logger.debug("Unable to authorize HealthKit.")
                     return
                 }
                 Task {

@@ -80,12 +80,12 @@ actor HealthKitControllerAsync {
     }
     
     // MARK: - Public Methods
-    @available(iOS 15, *)   // todo: support iOS 13 + (requestAuthorization)
+    @available(iOS 15, *)
     public func requestAuthorization() async -> Bool {
         guard isAvailable else { return false }
         
         do {
-            try await store.requestAuthorization(toShare: types, read: types)
+            try await store.requestAuthorization(toShare: types, read: types)   // available iOS 15+
             self.isAuthorized = true
             return true
         } catch let error {
@@ -95,7 +95,7 @@ actor HealthKitControllerAsync {
     }
     
     // Request authorization to read and save the required data types.
-    @available(iOS, deprecated: 13, message: "Prefer async alternative instead")
+    @available(iOS, deprecated: 15, message: "Prefer async alternative instead")
     public func requestAuthorization(completionHandler: @escaping (Bool) -> Void ) {
         guard isAvailable else { return }
         

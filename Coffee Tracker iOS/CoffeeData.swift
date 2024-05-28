@@ -7,9 +7,9 @@ A data object that tracks the number of drinks that the user has drunk.
 
 import SwiftUI
 import ClockKit
+import Foundation
 import os
 
-// use this floatFormatter for watchOS 8.0+
 @available(iOS 15, *)
 private let floatFormatter = FloatingPointFormatStyle<Double>().precision(.significantDigits(1...3))
 
@@ -18,8 +18,8 @@ class CoffeeData: ObservableObject {
     
     let logger = Logger(subsystem: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeData", category: "Model")
     
-    // The data model needs to be accessed both from the app extension
-    // and from the complication controller.
+    // The data model can accessed both from the app
+    // and from a (not yet implemented) widget controller.
     static let shared = CoffeeData()
     lazy var healthKitController = HealthKitController(withModel: self)
     
@@ -270,7 +270,6 @@ class CoffeeData: ObservableObject {
                 // Load new data from HealthKit.
                 self.healthKitController.requestAuthorization { (success) in
                     guard success else {
-                        self.logger.debug("Unable to authorize HealthKit.")
                         return
                     }
                     

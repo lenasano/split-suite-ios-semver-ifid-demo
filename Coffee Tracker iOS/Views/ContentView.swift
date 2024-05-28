@@ -24,10 +24,17 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            Image(systemName: "cup.and.saucer.fill")
-                .foregroundColor(Color(red: 0.6, green: 0.5, blue: 0.4))
-                .imageScale(.large)
-            // .foregroundStyle(.tint) TODO: only available in iOS 15+
+            if #available(iOS 15, *) {
+                Image(systemName: "cup.and.saucer.fill")
+                    .foregroundColor(.brown)
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                
+            } else {
+                Image(systemName: "cup.and.saucer.fill")
+                    .foregroundColor(Color(red: 0.6, green: 0.5, blue: 0.4)) // brown
+                    .imageScale(.large)
+            }
             Text("Coffee Tracker")
             Spacer()
             CoffeeTrackerView()
@@ -46,7 +53,7 @@ struct ContentView: View {
                         model.healthKitController.requestAuthorization { (success) in
                             
                             // Check for errors.
-                            if !success { fatalError("*** Unable to authenticate HealthKit ***") }
+                            if !success { fatalError("(x) Unable to authorize HealthKit") }
                             
                             // Check for updates from HealthKit.
                             model.healthKitController.loadNewDataFromHealthKit { _ in }
