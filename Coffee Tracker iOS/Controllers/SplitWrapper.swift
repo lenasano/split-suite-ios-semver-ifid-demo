@@ -26,7 +26,7 @@ class SplitWrapper: ObservableObject {
     
     struct flag {
         static let appVersion = "coffee_tracker_app_version"
-        static let osVersion  = "coffee_tracker_os_version"
+        static let isAsyncOn  = "coffee_tracker_async_features_no_osname_check"
     }
 
     struct flagAttribute {
@@ -49,7 +49,7 @@ class SplitWrapper: ObservableObject {
     // Retrieve the SDK API key
     // This is the front-end (client-side) Split API Key.
     // You first need to store this variable in your Swift project Scheme:
-    // click Product | Scheme | Edit Scheme... | Run | Arguments, and add
+    // In Xcode, click Product | Scheme | Edit Scheme... | Run | Arguments, and add
     // a "SplitSdkApiKey" environment variable.
     
     private let sdkApiKey = ProcessInfo.processInfo.environment["SplitSdkApiKey"]
@@ -58,7 +58,9 @@ class SplitWrapper: ObservableObject {
         
         // Define the config settings for the Split client
         
-        let userID = Key(matchingKey: UUID().uuidString)
+        let userID = Key(matchingKey: UUID().uuidString)    // Generates a unique UUIDs for testing during development or staging. This simulates multiple users.
+                                                            // When the app is released (i.e. production), this key should be unique to each user. This would allow
+                                                            // a smooth experience from each user's perspective (minimal feature on-off toggling).
         
         let clientConfig = SplitClientConfig()
         clientConfig.logLevel = .verbose
@@ -139,11 +141,20 @@ class SplitWrapper: ObservableObject {
             // Pass the Coffee Tracker iOS App version as an attribute
             attributes[flagAttribute.appVersion] = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
             
-        case flag.osVersion :
+            var attributes1: [String:Any] = [:]
+               attributes1["app_version"] = "16.4"
+               return suite.client.getTreatment("coffee_tracker_app_version", attributes: attributes1)
+        
+        case flag.isAsyncOn :
             // Pass the running OS name and version as an attribute
-            attributes[flagAttribute.osName   ] = UIDevice.current.systemName
-            attributes[flagAttribute.osVersion] = UIDevice.current.systemVersion
+            //attributes[flagAttribute.osName   ] = UIDevice.current.systemName
+            //attributes[flagAttribute.osVersion] = UIDevice.current.systemVersion as AnyObject
             
+            var attributes2: [String:Any] = [:]
+               attributes2["app_version"] = "16.4"
+               //attributes2["os_name"] = "iOS"
+               return suite.client.getTreatment("delete_me", attributes: attributes2)
+        
         default:
             logger.warning("evaluateFeatureFlagUsingAttribute method warning: No attributes are defined for \(flagName)")
             return nil

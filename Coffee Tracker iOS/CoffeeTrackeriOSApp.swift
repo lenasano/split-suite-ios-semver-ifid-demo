@@ -9,6 +9,7 @@
 */
 
 import SwiftUI
+import Foundation
 import os
 
 @main
@@ -20,9 +21,9 @@ struct CoffeeTrackeriOSApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                let isAsync = split.evaluateFeatureFlagUsingAttributes(SplitWrapper.flag.osVersion)
+                let isAsync = split.evaluateFeatureFlagUsingAttributes(SplitWrapper.flag.isAsyncOn)!
                 
-                if( "on" == isAsync ) {
+                if( isAsync.starts(with: "on") ) {
                     ContentViewAsync()
                 } else {
                     ContentView()
@@ -45,3 +46,4 @@ struct CoffeeTrackeriOSApp: App {
         }
     }
 }
+
