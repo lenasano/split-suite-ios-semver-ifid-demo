@@ -13,7 +13,7 @@ import os
 private let floatFormatter = FloatingPointFormatStyle<Double>().precision(.significantDigits(1...3))
 
 private actor CoffeeDataStoreAsync {
-    let logger = Logger(subsystem: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeDataStore", category: "ModelIO")
+    let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Model.CoffeeDataStoreAsync", category: "ModelIO")
     
     // Use this value to determine whether you have changes that can be saved to disk.
     private var savedValue: [Drink] = []

@@ -10,7 +10,7 @@ import os
 
 struct ContentView: View {
     
-    let logger = Logger(subsystem: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.ContengView", category: "Root View")
+    let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Views.ContentView", category: "Root View")
     
     @Environment(\.scenePhase) private var scenePhase
     

@@ -16,7 +16,7 @@ import os
 struct CoffeeTrackeriOSApp: App {
     @StateObject private var split = SplitWrapper.instance
     
-    let logger = Logger(subsystem: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.ContengView", category: "Root View")
+    let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.CoffeeTrackeriOSApp", category: "Root View")
     
     var body: some Scene {
         WindowGroup {

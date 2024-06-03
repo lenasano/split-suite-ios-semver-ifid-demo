@@ -19,8 +19,7 @@ import UIKit
 
 class SplitWrapper: ObservableObject {
     
-    // TODO: fix this logger 'subsystem'
-    let logger = Logger(subsystem: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.ContengView", category: "Root View")
+    let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Controllers.SplitWrapper", category: "Split")
     
     // MARK: - Strings that are also used in Split UI (exact match)
     

@@ -16,7 +16,7 @@ private let floatFormatter = FloatingPointFormatStyle<Double>().precision(.signi
 // The data model for the Coffee Tracker app.
 class CoffeeData: ObservableObject {
     
-    let logger = Logger(subsystem: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.CoffeeData", category: "Model")
+    let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Model.CoffeeDataStore", category: "ModelIO")
     
     // The data model can accessed both from the app
     // and from a (not yet implemented) widget controller.

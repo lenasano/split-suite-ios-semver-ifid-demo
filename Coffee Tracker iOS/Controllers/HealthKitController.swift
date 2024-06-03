@@ -25,7 +25,7 @@ private let miligrams = HKUnit.gramUnit(with: .milli)
 
 class HealthKitController {
     
-    let logger = Logger(subsystem: "com.example.apple-samplecode.Coffee-Tracker.watchkitapp.watchkitextension.HealthKitController",
+    let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Controllers.HealthKitController",
                         category: "HealthKit")
     
     // MARK: - Properties
