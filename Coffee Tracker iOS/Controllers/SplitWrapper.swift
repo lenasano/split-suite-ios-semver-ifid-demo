@@ -26,7 +26,7 @@ class SplitWrapper: ObservableObject {
     
     struct flag {
         static let appVersion = "coffee_tracker_app_version"
-        static let isAsyncOn  = "coffee_tracker_async_features_no_osname_check"
+        static let isAsyncOn  = "coffee_tracker_async_features"
     }
 
     struct flagAttribute {
@@ -139,28 +139,26 @@ class SplitWrapper: ObservableObject {
             
         case flag.appVersion :
             // Pass the Coffee Tracker iOS App version as an attribute
-            attributes[flagAttribute.appVersion] = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+            let appVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+            attributes[flagAttribute.appVersion] = appVersion.toThreePointVersionNumber() ?? appVersion
             
-            var attributes1: [String:Any] = [:]
-               attributes1["app_version"] = "16.4"
-               return suite.client.getTreatment("coffee_tracker_app_version", attributes: attributes1)
+            return suite.client.getTreatment(flag.appVersion, attributes: attributes)
         
         case flag.isAsyncOn :
-            // Pass the running OS name and version as an attribute
-            //attributes[flagAttribute.osName   ] = UIDevice.current.systemName
-            //attributes[flagAttribute.osVersion] = UIDevice.current.systemVersion as AnyObject
             
-            var attributes2: [String:Any] = [:]
-               attributes2["app_version"] = "16.4"
-               //attributes2["os_name"] = "iOS"
-               return suite.client.getTreatment("delete_me", attributes: attributes2)
+            let systemVersion = UIDevice.current.systemVersion
+            
+            // Pass the running OS name and version as an attribute
+            attributes[flagAttribute.osName   ] = UIDevice.current.systemName
+            attributes[flagAttribute.osVersion] = systemVersion.toThreePointVersionNumber() ?? systemVersion
+            
+            return suite.client.getTreatment(flag.isAsyncOn, attributes: attributes)
         
         default:
             logger.warning("evaluateFeatureFlagUsingAttribute method warning: No attributes are defined for \(flagName)")
             return nil
         }
         
-        return suite.client.getTreatment(flagName, attributes:attributes)
     }
     
     /// Sends an event to Split cloud where it is logged, viewable in the Split UI (https://app.split.io)
