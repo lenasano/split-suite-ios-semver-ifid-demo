@@ -9,7 +9,19 @@ import Foundation
 
 extension String {
     
+    /// Convert a one- or two-integer version number to a three-integer number.
+    /// For example, `"1.0"` is converted to `"1.0.0"`.
+    /// Note: The output of is function will be a valid SemVer number or `nil`.
+    /// SeeAlso: www.semver.org
     func toThreePointVersionNumber() -> String? {
+        
+        /* Note to the developer:
+         *
+         * The SemVer format optionally includes pre-release and build metadata
+         * information (see www.semver.org). You could modify this function to
+         * accept and validate this optional information before providing the value
+         * to Split Suite.
+        */
         
         if #available(iOS 16, *) {
             
