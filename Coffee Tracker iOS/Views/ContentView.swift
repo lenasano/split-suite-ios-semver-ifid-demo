@@ -1,8 +1,10 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ 
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A wrapper view that instantiates the coffee tracker view and the data for the hosting controller.
+ Abstract:
+ A wrapper view that instantiates the coffee tracker view and the data for the hosting controller.
+
 */
 
 import SwiftUI

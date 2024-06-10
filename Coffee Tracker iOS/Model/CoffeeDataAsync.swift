@@ -1,8 +1,10 @@
 /*
-See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A data object that tracks the number of drinks that the user has drunk.
+ See LICENSE folder for this sample’s licensing information.
+
+ Abstract:
+ A data object that tracks the number of drinks that the user has drunk.
+ 
 */
 
 import SwiftUI

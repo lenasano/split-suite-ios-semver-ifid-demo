@@ -13,6 +13,8 @@
 		673D80A22BF8CF76006D20F9 /* Split in Frameworks */ = {isa = PBXBuildFile; productRef = 673D80A12BF8CF76006D20F9 /* Split */; };
 		676D2D052C0D6D7700F69A7B /* CoffeeDataAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676D2D032C0D6D7600F69A7B /* CoffeeDataAsync.swift */; };
 		676D2D062C0D6D7700F69A7B /* CoffeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676D2D042C0D6D7600F69A7B /* CoffeeData.swift */; };
+		67B6804D2C12939200B61C02 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67B6804B2C12939200B61C02 /* LICENSE.txt */; };
+		67B6804F2C1293CF00B61C02 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 67B6804E2C1293CF00B61C02 /* README.md */; };
 		67DD27A02BF2CE1700ADEDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DD279F2BF2CE1700ADEDE5 /* Assets.xcassets */; };
 		67DD27A32BF2CE1700ADEDE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DD27A22BF2CE1700ADEDE5 /* Preview Assets.xcassets */; };
 		67DD27C62BF2CF1300ADEDE5 /* CoffeeTrackeriOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DD27C52BF2CF1300ADEDE5 /* CoffeeTrackeriOSApp.swift */; };
@@ -53,6 +55,8 @@
 		6729FED22C0CC8BC0059858A /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		676D2D032C0D6D7600F69A7B /* CoffeeDataAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeDataAsync.swift; sourceTree = "<group>"; };
 		676D2D042C0D6D7600F69A7B /* CoffeeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeData.swift; sourceTree = "<group>"; };
+		67B6804B2C12939200B61C02 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		67B6804E2C1293CF00B61C02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		67DD27982BF2CE1600ADEDE5 /* Coffee Tracker iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Tracker iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67DD279F2BF2CE1700ADEDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67DD27A22BF2CE1700ADEDE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -112,9 +116,19 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		67B6804C2C12939200B61C02 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				67B6804B2C12939200B61C02 /* LICENSE.txt */,
+			);
+			path = LICENSE;
+			sourceTree = "<group>";
+		};
 		67DD278F2BF2CE1600ADEDE5 = {
 			isa = PBXGroup;
 			children = (
+				67B6804E2C1293CF00B61C02 /* README.md */,
+				67B6804C2C12939200B61C02 /* LICENSE */,
 				6729FED12C0CC89D0059858A /* utils */,
 				67DD279A2BF2CE1600ADEDE5 /* Coffee Tracker iOS */,
 				67DD27E42BF2F60500ADEDE5 /* Coffee Tracker iOS UI Tests */,
@@ -321,7 +335,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B6804D2C12939200B61C02 /* LICENSE.txt in Resources */,
 				67DD27A32BF2CE1700ADEDE5 /* Preview Assets.xcassets in Resources */,
+				67B6804F2C1293CF00B61C02 /* README.md in Resources */,
 				67DD27A02BF2CE1700ADEDE5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,11 +1,8 @@
 /*
-  CoffeeTrackeriOSApp.swift
-  Coffee Tracker iOS
-
-  Created by lena on 13/05/2024.
-
-  Abstract:
-  The entry point for the Coffee Tracker iOS app.
+ 
+ Abstract:
+ The entry point for the Coffee Tracker iOS app.
+ 
 */
 
 import SwiftUI

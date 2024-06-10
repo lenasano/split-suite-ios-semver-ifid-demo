@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "String.toThreePointVersionNumber():utils.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result.patch">
+            </PersistentString>
+            <PersistentString
+               value = "(ints[0].isNumber &amp;&amp; ints[1].isNumber &amp;&amp; ints[2].isNumber)">
+            </PersistentString>
+            <PersistentString
+               value = "result.minor">
+            </PersistentString>
+            <PersistentString
+               value = "&quot;\(ints[0]).\(ints[1]).\(ints[2])&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "String(ints[0])">
+            </PersistentString>
+            <PersistentString
+               value = "ints.count">
+            </PersistentString>
+            <PersistentString
+               value = "String(ints[1])">
+            </PersistentString>
+            <PersistentString
+               value = "&quot;\(result.major).\(minor).\(patch)&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "String(ints[2])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in CoffeeTrackeriOSApp.body.getter:CoffeeTrackeriOSApp.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SplitWrapper.flag.isAsyncOn">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

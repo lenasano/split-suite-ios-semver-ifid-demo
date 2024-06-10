@@ -1,8 +1,10 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ 
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A data controller that manages reading and writing data from the HealthKit store.
+ Abstract:
+ A data controller that manages reading and writing data from the HealthKit store.
+ 
 */
 
 import Foundation

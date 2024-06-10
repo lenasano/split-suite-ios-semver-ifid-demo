@@ -1,8 +1,10 @@
 /*
-See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A structure that represents a single drink consumed by the user.
+ See LICENSE folder for this sample’s licensing information.
+
+ Abstract:
+ A structure that represents a single drink consumed by the user.
+
 */
 
 import Foundation

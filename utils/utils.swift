@@ -1,9 +1,9 @@
-//
-//  utils.swift
-//  Coffee Tracker iOS
-//
-//  Created by lena on 02/06/2024.
-//
+/*
+ 
+ Abstract:
+ String utilities and convenience functions.
+ 
+*/
 
 import Foundation
 

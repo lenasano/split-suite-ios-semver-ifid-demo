@@ -1,0 +1,33 @@
+{
+  "originHash" : "de7a129571e73c731daafb2e1c6597ad368cd2fa403862030e3e1f3c33db18b0",
+  "pins" : [
+    {
+      "identity" : "ios-client",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/splitio/ios-client",
+      "state" : {
+        "revision" : "8fbf8d6bb162135d028b84f7b2075fcc1800a772",
+        "version" : "2.25.0"
+      }
+    },
+    {
+      "identity" : "ios-rum",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/splitio/ios-rum",
+      "state" : {
+        "revision" : "758eeb366e947c410e6935c8d954200f679d69ea",
+        "version" : "0.4.0"
+      }
+    },
+    {
+      "identity" : "ios-suite",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/splitio/ios-suite",
+      "state" : {
+        "revision" : "ae81853af3a7ca09836960561b2737b7a772898b",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -1,8 +1,10 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ 
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A view where the user can select a drink from the list of available drinks.
+ Abstract:
+ A view where the user can select a drink from the list of available drinks.
+ 
 */
 
 import SwiftUI

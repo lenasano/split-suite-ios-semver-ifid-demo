@@ -1,8 +1,10 @@
 /*
-See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-The valid drink types.
+ See LICENSE folder for this sample’s licensing information.
+
+ Abstract:
+ The valid drink types.
+ 
 */
 
 import Foundation

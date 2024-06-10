@@ -1,14 +1,10 @@
-//
-//  SplitWrapper.swift
-//
-//  The wrapper that interfaces with the Split SDK and ensures that a
-//  SplitFactory is instantiated only once per session.
-//
-//  Coffee Tracker WatchKit Extension
-//
-//  Created by lena on 09/05/2024.
-//  Copyright © 2024 Apple. All rights reserved.
-//
+/*
+ 
+ Abstract:
+ The wrapper that interfaces with the Split SDK and ensures that a
+ SplitFactory is instantiated only once per session.
+ 
+*/
 
 import iOSSplitSuite
 import Foundation

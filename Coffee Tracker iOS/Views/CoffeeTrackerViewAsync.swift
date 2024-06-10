@@ -1,8 +1,10 @@
 /*
-See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-A view where users can add drinks or view the current amount of caffeine they have drunk.
+ See LICENSE folder for this sample’s licensing information.
+
+ Abstract:
+ A view where users can add drinks or view the current amount of caffeine they have drunk.
+ 
 */
 
 import SwiftUI
