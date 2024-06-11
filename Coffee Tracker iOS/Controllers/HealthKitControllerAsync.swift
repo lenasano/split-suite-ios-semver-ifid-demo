@@ -30,6 +30,8 @@ actor HealthKitControllerAsync {
     let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Controllers.HealthKitControllerAsync",
                         category: "HealthKit")
     
+    static var count = 0
+    
     // MARK: - Properties
     
     // A weak link to the main model.
@@ -116,7 +118,7 @@ actor HealthKitControllerAsync {
     }
     
     private func queryHealthKit() async throws -> ([HKSample]?, [HKDeletedObject]?, HKQueryAnchor?) {
-        return try await withCheckedThrowingContinuation { continuation in
+        return try await withCheckedThrowingContinuation { continuation in 
             // Create a predicate that only returns samples created within the last 24 hours.
             let endDate = Date()
             let startDate = endDate.addingTimeInterval(-24.0 * 60.0 * 60.0)
@@ -127,13 +129,25 @@ actor HealthKitControllerAsync {
                 type: caffeineType,
                 predicate: datePredicate,
                 anchor: anchor,
-                limit: HKObjectQueryNoLimit) { (_, samples, deletedSamples, newAnchor, error) in
+                limit: HKObjectQueryNoLimit) { [weak self] (_, samples, deletedSamples, newAnchor, error) in
                 
                 // When the query ends, check for errors.
                 if let error = error {
                     continuation.resume(throwing: error)
                 } else {
                     continuation.resume(returning: (samples, deletedSamples, newAnchor))
+                    
+                    // can't log here
+                    self?.logger.log("queryHealthKit: count is \(HealthKitControllerAsync.count)")
+                    HealthKitControllerAsync.count += 1
+                    if HealthKitControllerAsync.count > 1 {
+                        //do { sleep(5) }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                            //let createDivideByZeroError = 5 / [].count
+                            continuation.resume(returning: (samples, deletedSamples, newAnchor)) // error, wahahahaha
+                        }
+                        //continuation.resume(returning: (samples, deletedSamples, newAnchor))
+                    }
                 }
                 
             }

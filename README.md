@@ -4,7 +4,7 @@
 
 iOS app that uses Split feature flags to turn on Swift Concurrency.
 
-### _Note_
+#### Notes
 
 This sample code is based on the project associated with WWDC21 session [10194: Swift Concurrency: Update a Sample App](https://developer.apple.com/wwdc21/10194) that demonstrates how to improve your app's performance by refactoring your code to take advantage of asynchronous functions in Swift.
 

@@ -34,12 +34,15 @@ class CoffeeData: ObservableObject {
     @Published public var currentDrinks: [Drink] = [] {
         didSet {
             logger.debug("A value has been assigned to the current drinks property.")
+
+            /* When this was a watchOS app, we updated any complications on active
+             * watch faces here.
             
-            // Update any complications on active watch faces.
-            /* let server = CLKComplicationServer.sharedInstance()
+            let server = CLKComplicationServer.sharedInstance()
             for complication in server.activeComplications ?? [] {
                 server.reloadTimeline(for: complication)
-            } */
+            }
+            */
             
             // Begin saving the data.
             self.save()
@@ -220,12 +223,13 @@ class CoffeeData: ObservableObject {
             }
         }
         
-        // If the app is running in the background, save synchronously.
-        // TODO: figure out: cannot find WKExtension to save in the background
-        /*if WKExtension.shared().activationState == UIApplication.State.background {
+        /* watchOS (original code) :
+         * If the app is running in the background, save synchronously.
+         
+        if WKExtension.shared().activationState == UIApplication.State.background {
             logger.debug("Synchronously saving the model on \(Thread.current).")
             saveAction()
-        } else {*/
+        } else { */
             // Otherwise save the data on a background queue.
             background.async {
                 self.logger.debug("Asynchronously saving the model on a background thread.")

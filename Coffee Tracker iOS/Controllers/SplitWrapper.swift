@@ -98,7 +98,9 @@ class SplitWrapper: ObservableObject {
             }
         
             // Evaluate a Split feature flag to enable Split to distinguish Real User
-            // Monitoring (RUM) metrics for specific release versions of this app
+            // Monitoring (RUM) metrics for specific release versions of this app.
+            // The results are visible in the Split UI, on the feature flag's Metric
+            // impact tab.
             
             _ = evaluateFeatureFlagUsingAttributes(flag.appVersion)
         }

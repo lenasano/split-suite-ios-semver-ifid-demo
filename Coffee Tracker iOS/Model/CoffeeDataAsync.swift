@@ -119,13 +119,16 @@ class CoffeeDataAsync: ObservableObject {
     private func drinksUpdated() async {
         logger.debug("A value has been assigned to the current drinks property.")
         
-        // Update any complications on active watch faces.
-        /*
+        /* watchOS (original) code :
+         * When this was a watchOS app, we updated any complications on active
+         * watch faces here.
+        
         let server = CLKComplicationServer.sharedInstance()
         for complication in server.activeComplications ?? [] {
             server.reloadTimeline(for: complication)
         }
         */
+        
         // Begin saving the data.
         await store.save(currentDrinks)
     }
