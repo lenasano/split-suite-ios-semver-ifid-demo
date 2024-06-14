@@ -13,7 +13,7 @@ import UIKit
 
 
 
-class SplitWrapper: ObservableObject {
+class SplitWrapper /*: ObservableObject*/ {
     
     let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Controllers.SplitWrapper", category: "Split")
     
@@ -38,8 +38,8 @@ class SplitWrapper: ObservableObject {
 
     private let suite: SplitSuite
     
-    @Published var isReady: Bool = false
-    @Published var isReadyTimedOut: Bool = false
+    //@Published var isReady: Bool = false
+    //@Published var isReadyTimedOut: Bool = false
     
     // Retrieve the SDK API key
     // This is the front-end (client-side) Split API Key.
@@ -64,14 +64,15 @@ class SplitWrapper: ObservableObject {
         // Initialize the Split instance and start downloading Split feature flag
         // and segment definitions from Split cloud
         
-        suite = DefaultSplitSuite.builder() // TODO: different from docs!
+        // ATTENTION: this next line is crashing at runtime
+        suite = DefaultSplitSuite.builder() // NOTE: different from docs!
             .setApiKey(sdkApiKey!)
             .setKey(userID)
             .setConfig(clientConfig)
             .build()!
         
         // Handle the sdkReadyTimeOut event
-        
+        /* TODO: try here
         suite.client.on(event: .sdkReadyTimedOut) { [weak self] in
             guard let self = self else { return }
 
@@ -80,9 +81,9 @@ class SplitWrapper: ObservableObject {
             //     Split definitions, AND
             // (2) the Split definitions have also not been cached.
             
-            DispatchQueue.main.async {
+            / * DispatchQueue.main.async {
                 self.isReadyTimedOut = true
-            }
+            }* /
         }
         
         // Handle the sdkReady event
@@ -93,17 +94,17 @@ class SplitWrapper: ObservableObject {
             // Set a flag (a @Published var) when the Split definitions are
             // downloaded.
             
-            DispatchQueue.main.async {
+            / * DispatchQueue.main.async {
                 self.isReady = true
-            }
+            }* /
         
             // Evaluate a Split feature flag to enable Split to distinguish Real User
             // Monitoring (RUM) metrics for specific release versions of this app.
             // The results are visible in the Split UI, on the feature flag's Metric
             // impact tab.
             
-            _ = evaluateFeatureFlagUsingAttributes(flag.appVersion)
-        }
+            //_ = evaluateFeatureFlagUsingAttributes(flag.appVersion)
+        } */
         
         // Tip: The following events can also be received:
         //    .sdkReadyFromCache - faster than .sdkReady
@@ -111,7 +112,7 @@ class SplitWrapper: ObservableObject {
     }
     
     // MARK: - Split SDK Function Wrappers
-    
+    /*
     /// Retrieves the treatment for the given feature flag, as defined in the Split UI (https://app.split.io)
     /// Parameter: `flagName`: The name of the Split feature flag, as defined in the Split UI.
     /// Warning: If the Split definitions are not yet loaded, this function returns "CONTROL".
@@ -194,5 +195,5 @@ class SplitWrapper: ObservableObject {
     /// connections, and flushing the remaining unpublished impressions and events.
     private func destroy() {
         return suite.client.destroy()     // return??
-    }
+    } */
 }
