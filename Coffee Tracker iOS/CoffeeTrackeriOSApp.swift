@@ -39,7 +39,6 @@ struct CoffeeTrackeriOSApp: App {
     @ViewBuilder private var loadingOverlay: some View {
         if !split.isReady && !split.isReadyTimedOut {
             ProgressView()
-        
         }
     }
 }
