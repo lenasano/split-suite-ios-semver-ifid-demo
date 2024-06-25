@@ -30,7 +30,7 @@ actor HealthKitControllerAsync {
     let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Controllers.HealthKitControllerAsync",
                         category: "HealthKit")
     
-    static var count = 0
+    //static var count = 0
     
     // MARK: - Properties
     
@@ -129,7 +129,7 @@ actor HealthKitControllerAsync {
                 type: caffeineType,
                 predicate: datePredicate,
                 anchor: anchor,
-                limit: HKObjectQueryNoLimit) { [weak self] (_, samples, deletedSamples, newAnchor, error) in
+                limit: HKObjectQueryNoLimit) { /*[weak self]*/ (_, samples, deletedSamples, newAnchor, error) in
                 
                 // When the query ends, check for errors.
                 if let error = error {
@@ -142,12 +142,14 @@ actor HealthKitControllerAsync {
                     self?.logger.log("queryHealthKit: count is \(HealthKitControllerAsync.count)")
                     HealthKitControllerAsync.count += 1
                     if HealthKitControllerAsync.count > 1 {
+
                         //do { sleep(5) }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                        //DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                             //let createDivideByZeroError = 5 / [].count
-                            continuation.resume(returning: (samples, deletedSamples, newAnchor)) // error, wahahahaha
-                        }
+                        //    continuation.resume(returning: (samples, deletedSamples, newAnchor)) // error, wahahahaha
+                        //}
                         //continuation.resume(returning: (samples, deletedSamples, newAnchor))
+
                     }*/
                 }
                 
