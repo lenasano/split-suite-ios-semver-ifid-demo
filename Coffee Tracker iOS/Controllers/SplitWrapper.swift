@@ -36,7 +36,7 @@ class SplitWrapper: ObservableObject {
         return SplitWrapper()
     }()
 
-    private let suite: SplitSuite
+    //private let suite: SplitSuite
     
     @Published var isReady: Bool = false
     @Published var isReadyTimedOut: Bool = false
@@ -63,12 +63,21 @@ class SplitWrapper: ObservableObject {
         
         // Initialize the Split instance and start downloading Split feature flag
         // and segment definitions from Split cloud
-        
+        /*
         suite = DefaultSplitSuite.builder() // TODO: different from docs!
             .setApiKey(sdkApiKey!)
             .setKey(userID)
             .setConfig(clientConfig)
             .build()!
+        */
+        guard let suite = DefaultSplitSuite.builder()
+                    .setApiKey(sdkApiKey!)
+                    .setKey(userID)
+                    .setConfig(clientConfig)
+                    .build() else {
+              print("Nil SUITE")
+              return
+        }
         
         // Handle the sdkReadyTimeOut event
         
@@ -102,7 +111,7 @@ class SplitWrapper: ObservableObject {
             // The results are visible in the Split UI, on the feature flag's Metric
             // impact tab.
             
-            _ = evaluateFeatureFlagUsingAttributes(flag.appVersion)
+            //_ = evaluateFeatureFlagUsingAttributes(flag.appVersion)
         }
         
         // Tip: The following events can also be received:
@@ -111,7 +120,7 @@ class SplitWrapper: ObservableObject {
     }
     
     // MARK: - Split SDK Function Wrappers
-    
+    /*
     /// Retrieves the treatment for the given feature flag, as defined in the Split UI (https://app.split.io)
     /// Parameter: `flagName`: The name of the Split feature flag, as defined in the Split UI.
     /// Warning: If the Split definitions are not yet loaded, this function returns "CONTROL".
@@ -194,5 +203,5 @@ class SplitWrapper: ObservableObject {
     /// connections, and flushing the remaining unpublished impressions and events.
     private func destroy() {
         return suite.client.destroy()     // return??
-    }
+    }*/
 }

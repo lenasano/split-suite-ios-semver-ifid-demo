@@ -138,6 +138,7 @@ actor HealthKitControllerAsync {
                     continuation.resume(returning: (samples, deletedSamples, newAnchor))
                     
                     // can't log here
+                    /*
                     self?.logger.log("queryHealthKit: count is \(HealthKitControllerAsync.count)")
                     HealthKitControllerAsync.count += 1
                     if HealthKitControllerAsync.count > 1 {
@@ -147,7 +148,7 @@ actor HealthKitControllerAsync {
                             continuation.resume(returning: (samples, deletedSamples, newAnchor)) // error, wahahahaha
                         }
                         //continuation.resume(returning: (samples, deletedSamples, newAnchor))
-                    }
+                    }*/
                 }
                 
             }

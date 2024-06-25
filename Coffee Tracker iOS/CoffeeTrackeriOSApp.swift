@@ -18,13 +18,13 @@ struct CoffeeTrackeriOSApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                let isAsync = split.evaluateFeatureFlagUsingAttributes(SplitWrapper.flag.isAsyncOn)!
+                /*let isAsync = split.evaluateFeatureFlagUsingAttributes(SplitWrapper.flag.isAsyncOn)!
                 
-                if( isAsync.starts(with: "on") ) {
+                if( isAsync.starts(with: "on") ) {*/
                     ContentViewAsync()
-                } else {
+                /*} else {
                     ContentView()
-                }
+                }*/
             }
             .onAppear() {
                 logger.debug("App appeared!")
