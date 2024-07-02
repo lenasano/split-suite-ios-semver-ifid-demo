@@ -13,7 +13,7 @@ import UIKit
 
 
 
-class SplitWrapper: ObservableObject {
+class SplitWrapper : ObservableObject {
     
     let logger = Logger(subsystem: "splitio-examples.Coffee-Tracker-iOS.Controllers.SplitWrapper", category: "Split")
     
@@ -63,6 +63,7 @@ class SplitWrapper: ObservableObject {
         
         // Initialize the Split instance and start downloading Split feature flag
         // and segment definitions from Split cloud
+
         
         suite = DefaultSplitSuite.builder() // TODO: different from docs!
             .setApiKey(sdkApiKey)
@@ -71,7 +72,6 @@ class SplitWrapper: ObservableObject {
             .build()!
         
         // Handle the sdkReadyTimeOut event
-        
         suite.client.on(event: .sdkReadyTimedOut) { [weak self] in
             guard let self = self else { return }
 
@@ -104,6 +104,7 @@ class SplitWrapper: ObservableObject {
             
             _ = evaluateFeatureFlagUsingAttributes(flag.appVersion)
         }
+
         
         // Tip: The following events can also be received:
         //    .sdkReadyFromCache - faster than .sdkReady
