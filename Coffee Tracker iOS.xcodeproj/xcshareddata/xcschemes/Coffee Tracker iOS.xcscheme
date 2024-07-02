@@ -74,13 +74,6 @@
             ReferencedContainer = "container:Coffee Tracker iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "SplitSdkApiKey"
-            value = "s9sbqg8afg4aecjpuv9s2ok21663qlhqfvbm"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

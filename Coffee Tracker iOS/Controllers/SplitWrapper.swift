@@ -43,11 +43,11 @@ class SplitWrapper: ObservableObject {
     
     // Retrieve the SDK API key
     // This is the front-end (client-side) Split API Key.
-    // You first need to store this variable in your Swift project Scheme:
+    // For debugging: You first need to store this variable in your Swift project Scheme:
     // In Xcode, click Product | Scheme | Edit Scheme... | Run | Arguments, and add
     // a "SplitSdkApiKey" environment variable.
     
-    private let sdkApiKey = ProcessInfo.processInfo.environment["SplitSdkApiKey"]
+    private let sdkApiKey = "your client-side Split SDK API key goes here (retrieved from Split UI | Admin settings)" // ok for debugging: ProcessInfo.processInfo.environment["SplitSdkApiKey"]
 
     private init() {
         
@@ -65,7 +65,7 @@ class SplitWrapper: ObservableObject {
         // and segment definitions from Split cloud
         
         suite = DefaultSplitSuite.builder() // TODO: different from docs!
-            .setApiKey(sdkApiKey!)
+            .setApiKey(sdkApiKey)
             .setKey(userID)
             .setConfig(clientConfig)
             .build()!
